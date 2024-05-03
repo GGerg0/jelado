@@ -11,6 +11,9 @@ class Jel:
 def eltelt(ido1,ido2):
     return int(ido2-ido1)
 
+def mpora(mp):
+    return [int(mp/3600),int((mp%3600)/60),(mp%3600)%60]
+
 f = open("jel.txt", "rt")
 
 adatok = []
@@ -27,3 +30,9 @@ if sorszam != 0:
 
 print(f"x={adatok[sorszam].x} y={adatok[sorszam].y}")
 
+teljes = mpora(eltelt(adatok[0].mp(),adatok[len(adatok)-1].mp()))
+
+
+print("4. feladat")
+
+print(f"Időtartam: {teljes[0]}:{teljes[1]}:{teljes[2]}")
