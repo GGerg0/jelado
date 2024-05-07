@@ -1,3 +1,5 @@
+import math
+
 class Jel:
     def __init__(self,ora,perc,masodperc,x,y):
         self.ora=ora
@@ -55,3 +57,11 @@ for jel in adatok:
         jobbfent[1]=jel.y
     
 print(f"Bal alsó: {ballent[0]} {ballent[1]}, jobb felső: {jobbfent[0]} {jobbfent[1]}")
+
+print("6. feladat")
+
+tavolsag = 0
+
+for i in range(len(adatok)-1):
+    tavolsag += ((((adatok[i].x-adatok[i+1].x)**2))+((adatok[i].y-adatok[i+1].y)**2))**0.5
+print(f"ELmozdulás: {round(tavolsag,3)} egység")
