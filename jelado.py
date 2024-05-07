@@ -36,3 +36,22 @@ teljes = mpora(eltelt(adatok[0].mp(),adatok[len(adatok)-1].mp()))
 print("4. feladat")
 
 print(f"Időtartam: {teljes[0]}:{teljes[1]}:{teljes[2]}")
+
+
+print("5. feladat")
+
+ballent = [adatok[0].x,adatok[0].y]
+jobbfent = [adatok[0].x,adatok[0].y]
+
+
+for jel in adatok:
+    if jel.x < ballent[0]:
+        ballent[0]=jel.x
+    elif jel.x > jobbfent[0]:
+        jobbfent[0]=jel.x
+    if jel.y < ballent[1]:
+        ballent[1]=jel.y
+    elif jel.y > jobbfent[1]:
+        jobbfent[1]=jel.y
+    
+print(f"Bal alsó: {ballent[0]} {ballent[1]}, jobb felső: {jobbfent[0]} {jobbfent[1]}")
